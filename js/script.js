@@ -168,5 +168,13 @@ createApp({
             ]
 
         }
+    },
+    methods: {
+        formatHour: function (userIndex) {
+            const messages = this.contacts[userIndex].messages
+            const lastMessagesData = messages[messages.length - 1].date
+            const [date, time] = lastMessagesData.split(' ')
+            return time
+        }
     }
 }).mount('#app')
