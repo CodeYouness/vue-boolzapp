@@ -36,7 +36,8 @@ body>main {
     background-color: white;
     position: absolute;
     height: 95vh;
-    width: 80%;
+    /* width of 80% before complete */
+    width: 95%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -65,5 +66,34 @@ header img {
     border-radius: 50%;
     width: 40px;
     margin-left: 0.5rem;
+}
 
+.size-of-chat {
+    height: 9%;
+}
+
+.notify {
+    background-color: #8edafc;
+}
+
+.round-circle {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    background-color: #f1fafe;
+    border-radius: 50%;
+}
+
+.round-circle i {
+    color: #8edafc;
+}
+
+a {
+    color: gray;
+}
+
+.small-text {
+    font-size: 0.7rem;
 }
