@@ -44,7 +44,7 @@ body>main {
 }
 
 header i {
-    color: lightgray;
+    color: #acabac;
     margin-right: 0.8rem;
 }
 
@@ -96,4 +96,10 @@ a {
 
 .small-text {
     font-size: 0.7rem;
+}
+
+.search-box {
+    vertical-align: auto;
+    height: 5%;
+    background-color: #eaeaea;
 }
