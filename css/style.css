@@ -6,7 +6,7 @@
 
 body {
     font-family: "Lato", sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -15,15 +15,15 @@ body {
     height: 20vh;
 }
 
-main {
+body>main {
     background-color: #dadbd2;
     height: 80vh;
 }
 
-.chat {
+.chat-box {
     background-color: white;
     position: absolute;
-    height: 90vh;
+    height: 95vh;
     width: 80%;
     top: 50%;
     left: 50%;
