@@ -66,6 +66,7 @@ header img {
     border-radius: 50%;
     width: 40px;
     margin-left: 0.5rem;
+    margin-right: 0.25rem;
 }
 
 .size-of-chat {
@@ -90,7 +91,8 @@ header img {
     color: #8edafc;
 }
 
-a {
+a,
+.search-box i {
     color: gray;
 }
 
@@ -99,7 +101,19 @@ a {
 }
 
 .search-box {
-    vertical-align: auto;
-    height: 5%;
+    height: 35px;
     background-color: #eaeaea;
+    justify-content: center;
+}
+
+.search-box input {
+    border: 0;
+    width: 316.833px;
+    height: 25px;
+    text-align: center;
+}
+
+.search-box i {
+    position: absolute;
+    left: 30px;
 }
