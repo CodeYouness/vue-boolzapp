@@ -19,3 +19,13 @@ main {
     background-color: #dadbd2;
     height: 80vh;
 }
+
+.chat {
+    background-color: white;
+    position: absolute;
+    height: 90vh;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
