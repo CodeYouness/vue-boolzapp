@@ -26,7 +26,7 @@
 
     <main>
         <!-- Box al centro con dentro tutta la chat -->
-        <div class="chat-box flex">
+        <div class="chat-box flex" id="app">
 
             <!-- left side of the chat-box -->
             <aside class="left-chat">
@@ -62,8 +62,21 @@
                 <!-- Search box -->
                 <div class="search-box flex center">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="small-text">
                 </div>
+
+                <!-- Chat preview -->
+                <section class="chat-preview">
+                    <div class="flex" v-for="(user,index) in contacts" :key="index">
+                        <img src="./img/avatar_1.jpg" alt="">
+                        <div class="text-wrapper">
+                            <h4>{{user.name}}</h4>
+                            <p>{{user.}}</p>
+                        </div>
+                        <span class="hour">orario</span>
+                    </div>
+
+                </section>
             </aside>
 
             <!-- right side of the chat-box (main) -->
