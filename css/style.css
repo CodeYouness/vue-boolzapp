@@ -44,7 +44,7 @@ body>main {
 
 header i {
     color: lightgray;
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
 }
 
 .chat-box header {
@@ -55,10 +55,13 @@ header i {
 .left-chat {
     width: calc(35% - 1px);
     border-right: 1px solid lightgrey;
-
 }
 
-header>img {
+.right-chat {
+    width: 65%;
+}
+
+header img {
     border-radius: 50%;
     width: 40px;
     margin-left: 0.5rem;
