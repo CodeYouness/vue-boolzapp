@@ -10,6 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
@@ -22,14 +26,20 @@
 
     <main>
         <!-- Box al centro con dentro tutta la chat -->
-        <div class="chat-box">
+        <div class="chat-box flex">
 
             <!-- left side of the chat-box -->
             <aside class="left-chat">
-                <header>
-                    <img src="./img/avatar_2.jpg" alt="user-avatar">
-                    <div class="high-left-button">
 
+                <!-- head of left side -->
+                <header class="flex center sp-between">
+                    <img src="./img/avatar_2.jpg" alt="user-avatar">
+
+                    <!-- button -->
+                    <div class="high-left-button">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
             </aside>

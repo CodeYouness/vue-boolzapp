@@ -10,6 +10,18 @@ body {
     font-style: normal;
 }
 
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.sp-between {
+    justify-content: space-between;
+}
+
 .green-bar {
     background-color: #009688;
     height: 20vh;
@@ -28,4 +40,27 @@ body>main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+header i {
+    color: lightgray;
+    margin-right: 0.5rem;
+}
+
+.chat-box header {
+    height: 8%;
+    background-color: #eaeaea;
+}
+
+.left-chat {
+    width: calc(35% - 1px);
+    border-right: 1px solid lightgrey;
+
+}
+
+header>img {
+    border-radius: 50%;
+    width: 40px;
+    margin-left: 0.5rem;
+
 }
