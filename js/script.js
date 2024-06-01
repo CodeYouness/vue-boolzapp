@@ -165,10 +165,13 @@ createApp({
                         }
                     ],
                 }
-            ]
-
+            ],
+            activeUser: 0
         }
     },
+    // created() {
+    //     this.activeUser = this.contacts[0].name
+    // },
     methods: {
         formatHour: function (userIndex) {
             const messages = this.contacts[userIndex].messages
@@ -181,6 +184,9 @@ createApp({
             const lastMessagesData = messages[messages.length - 1].date
             const [date, time] = lastMessagesData.split(' ')
             return date
+        },
+        returnActiveUser: function (nameProperty) {
+            return this.contacts[this.activeUser][nameProperty]
         }
     }
 }).mount('#app')

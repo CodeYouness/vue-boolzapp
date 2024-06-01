@@ -59,7 +59,7 @@ header i {
 }
 
 .right-chat {
-    width: 65%;
+    width: 66%;
 }
 
 header img {
@@ -108,7 +108,7 @@ a,
 
 .search-box input {
     border: 0;
-    width: 316.833px;
+    width: 95%;
     height: 25px;
     text-align: center;
 }
@@ -146,4 +146,24 @@ a,
     right: 15px;
     top: 0;
     color: darkgray
+}
+
+.chat-system {
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+    height: 84%;
+}
+
+.text-box {
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f3eeea;
+    height: 8%;
+}
+
+.text-box input {
+    width: 80%;
+    height: 60%;
+    border: 0;
+    padding: 0 0.5rem;
 }
