@@ -152,6 +152,7 @@ a,
     background-image: url(../img/mine.jpg);
     background-size: contain;
     height: 84%;
+    border-right: #f3eeea 1px solid;
 }
 
 .text-box {
@@ -166,4 +167,36 @@ a,
     height: 60%;
     border: 0;
     padding: 0 0.5rem;
+}
+
+.chat-container {
+    padding-top: 3rem;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+.message {
+    height: fit-content;
+    width: 40%;
+    padding: 0.5rem 1rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.sent {
+    margin-left: auto;
+    background-color: #d5f9ba;
+}
+
+.received {
+    margin-right: auto;
+    background-color: white;
+}
+
+.sent-hour {
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
 }
