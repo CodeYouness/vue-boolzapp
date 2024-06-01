@@ -102,9 +102,10 @@
 
                 <div class="chat-system">
                     <div class="chat-container">
-                        <div class="message sent">
-                            <p class="">si </p>
-                            <span class="sent-hour small-text">orario</span>
+                        <div class="message sent" v-for="(messageInfo, index) in contacts[activeUser].messages"
+                            :key="index">
+                            <p>{{messageInfo.message}} </p>
+                            <span class="sent-hour small-text">{{returnHour(messageInfo)}}</span>
                         </div>
                         <div class="message received">
                             <p>si o forse no, vediamo un po tu che dici</p>

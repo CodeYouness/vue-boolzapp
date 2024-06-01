@@ -193,6 +193,11 @@ createApp({
         },
         changeActiveUser: function (index) {
             this.activeUser = index
+        },
+        returnHour: function (message) {
+            const dateTime = message.date
+            const [date, time] = dateTime.split(' ')
+            return time
         }
     }
 }).mount('#app')
