@@ -192,8 +192,10 @@ createApp({
             const messages = this.contacts[this.activeUser].messages
             const lastMessagesData = messages[messages.length - 1].date
             const [date, time] = lastMessagesData.split(' ')
-            console.log(time)
             return time
+        },
+        changeActiveUser: function (index) {
+            this.activeUser = index
         }
     }
 }).mount('#app')
