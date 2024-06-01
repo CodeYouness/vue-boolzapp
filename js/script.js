@@ -197,6 +197,7 @@ createApp({
         returnHour: function (message) {
             const dateTime = message.date
             const [date, time] = dateTime.split(' ')
+            console.log(message)
             return time
         }
     }

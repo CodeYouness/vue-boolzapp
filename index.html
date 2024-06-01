@@ -102,14 +102,10 @@
 
                 <div class="chat-system">
                     <div class="chat-container">
-                        <div class="message sent" v-for="(messageInfo, index) in contacts[activeUser].messages"
-                            :key="index">
+                        <div class="message" v-for="(messageInfo, index) in contacts[activeUser].messages" :key="index"
+                            :class="(messageInfo.status === 'sent') ? 'sent' : 'received'">
                             <p>{{messageInfo.message}} </p>
                             <span class="sent-hour small-text">{{returnHour(messageInfo)}}</span>
-                        </div>
-                        <div class="message received">
-                            <p>si o forse no, vediamo un po tu che dici</p>
-                            <span class="sent-hour small-text">orario</span>
                         </div>
                     </div>
                 </div>
