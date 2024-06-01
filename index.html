@@ -87,8 +87,8 @@
                     <div class="img flex center">
                         <img :src="returnActiveUser('avatar') + '.jpg'" alt="">
                         <div>
-                            <h5>nome soggetto</h5>
-                            <p class="small-text">ultimo accesso soggetto</p>
+                            <h5>{{returnActiveUser('name')}}</h5>
+                            <p class="small-text">Ultimo accesso oggi alle: {{lastMessagesHour()}}</p>
                         </div>
                     </div>
 

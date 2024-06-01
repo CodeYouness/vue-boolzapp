@@ -187,6 +187,13 @@ createApp({
         },
         returnActiveUser: function (nameProperty) {
             return this.contacts[this.activeUser][nameProperty]
+        },
+        lastMessagesHour: function () {
+            const messages = this.contacts[this.activeUser].messages
+            const lastMessagesData = messages[messages.length - 1].date
+            const [date, time] = lastMessagesData.split(' ')
+            console.log(time)
+            return time
         }
     }
 }).mount('#app')
