@@ -101,12 +101,10 @@
                 </header>
 
                 <div class="chat-system">
-                    <div class="chat-container">
-                        <div class="message" v-for="(messageInfo, index) in contacts[activeUser].messages" :key="index"
-                            :class="(messageInfo.status === 'sent') ? 'sent' : 'received'">
-                            <p>{{messageInfo.message}} </p>
-                            <span class="sent-hour small-text">{{returnHour(messageInfo)}}</span>
-                        </div>
+                    <div class="message" v-for="(messageInfo, index) in contacts[activeUser].messages" :key="index"
+                        :class="(messageInfo.status === 'sent') ? 'sent' : 'received'">
+                        <p>{{messageInfo.message}} </p>
+                        <span class="sent-hour small-text">{{returnHour(messageInfo)}}</span>
                     </div>
                 </div>
 
