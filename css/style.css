@@ -128,6 +128,7 @@ a,
     width: 100%;
     align-items: flex-start;
     position: relative;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .chat-preview img {
@@ -153,7 +154,7 @@ a,
     background-size: contain;
     height: 84%;
     border-right: #f3eeea 1px solid;
-    padding: 3rem 2rem 0;
+    padding: 3rem 3rem 0;
     overflow: auto;
 }
 
