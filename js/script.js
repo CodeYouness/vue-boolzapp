@@ -197,8 +197,19 @@ createApp({
         returnHour: function (message) {
             const dateTime = message.date
             const [date, time] = dateTime.split(' ')
-            console.log(message)
             return time
-        }
+        },
+        addMessage: function (newMessage) {
+            const messageInfo = {
+                'date': '10/01/2020 15:30:55',
+                'message': '',
+                'status': 'sent'
+            }
+            if (newMessage.length >= 1) {
+                messageInfo.message = newMessage
+                this.contacts[this.activeUser].messages.push(messageInfo)
+                this.insertText = ''
+            }
+        },
     }
 }).mount('#app')
