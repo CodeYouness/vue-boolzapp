@@ -211,7 +211,16 @@ createApp({
                 messageInfo.message = newMessage
                 this.contacts[this.activeUser].messages.push(messageInfo)
                 this.insertText = ''
+                setTimeout(this.answerMessage, 1000)
             }
         },
+        answerMessage: function () {
+            const messageInfo = {
+                'date': '10/01/2020 16:30:55',
+                'message': 'ok!',
+                'status': 'received'
+            }
+            this.contacts[this.activeUser].messages.push(messageInfo)
+        }
     }
 }).mount('#app')
