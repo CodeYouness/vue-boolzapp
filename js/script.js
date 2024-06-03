@@ -222,11 +222,8 @@ createApp({
             }
             this.contacts[this.activeUser].messages.push(messageInfo)
         },
-        addActiveClass: function (sameDiv, index) {
-            sameDiv.classList.add('yeah')
-            // this.contacts.forEach((element) => {
-            //     if(element)
-            // });
+        searchFunction: function () {
+            console.log('evvai')
         }
     }
 }).mount('#app')

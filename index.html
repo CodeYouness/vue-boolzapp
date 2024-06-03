@@ -62,11 +62,12 @@
                 <!-- Search box -->
                 <div class="search-box flex center">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="small-text">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="small-text"
+                        title="type a name" @keyup="searchFunction()">
                 </div>
 
                 <!-- Chat preview -->
-                <section class="chat-preview">
+                <section class="chat-preview" id="chat-preview-container">
                     <div class="flex" v-for="(user,index) in contacts" :key="index" @click="changeActiveUser(index)"
                         :class="(activeUser === index) ? 'active': ''">
                         <img :src="user.avatar + '.jpg'" alt="user.name">
