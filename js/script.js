@@ -225,9 +225,13 @@ createApp({
         },
         searchFunction: function () {
             let searchTextUpper = this.searchText.toUpperCase()
-            // if (this.searchText === '') {
-            console.log(searchTextUpper)
-            // }
+            if (this.searchText === '') {
+                return this.contacts
+            }
+            const filteredContacts = this.contacts.filter((user, index) => {
+                user.name.toUpperCase().includes(searchTextUpper)
+            })
+            return filteredContacts
         }
     }
 }).mount('#app')
