@@ -132,6 +132,10 @@ a,
     border-bottom: 1px solid #eaeaea;
 }
 
+.chat-preview>div:hover {
+    background-color: #eee
+}
+
 .chat-preview img {
     width: 55px;
     height: 55px;
