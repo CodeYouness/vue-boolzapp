@@ -204,3 +204,7 @@ a,
     right: 5px;
     bottom: 3px;
 }
+
+.none {
+    display: none;
+}

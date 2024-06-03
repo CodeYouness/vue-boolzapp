@@ -230,7 +230,13 @@ createApp({
             this.contacts.forEach((user, index) => {
                 const nameUser = chat[index].getElementsByTagName('h4')[0];
                 txtValue = nameUser.textContent || nameUser.innerText;
-
+                if (txtValue.toUpperCase().indexOf(inputValue) > -1) {
+                    chat[index].classList.add('flex');
+                    chat[index].classList.remove('none');
+                } else {
+                    chat[index].classList.add('none');
+                    chat[index].classList.remove('flex');
+                }
             });
         }
     }
