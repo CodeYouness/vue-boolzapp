@@ -63,13 +63,13 @@
                 <div class="search-box flex center">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" placeholder="Cerca o inizia una nuova chat" class="small-text"
-                        title="type a name" @keyup="searchFunction()" id="myInput" v-model="searchText">
+                        title="type a name" id="myInput" v-model="searchText">
                 </div>
 
                 <!-- Chat preview -->
                 <section class="chat-preview" id="chat-preview-container">
-                    <div class="flex" v-for="(user,index) in contacts" :key="index" @click="changeActiveUser(index)"
-                        :class="(activeUser === index) ? 'active': ''">
+                    <div class="flex" v-for="(user,index) in searchFunction" :key="index"
+                        @click="changeActiveUser(index)" :class="(activeUser === index) ? 'active': ''">
                         <img :src="user.avatar + '.jpg'" alt="user.name">
                         <div class="text-wrapper">
                             <h4>{{user.name}}</h4>

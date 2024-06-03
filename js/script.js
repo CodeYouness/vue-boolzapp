@@ -171,6 +171,18 @@ createApp({
             searchText: '',
         }
     },
+    computed: {
+        searchFunction: function () {
+            let searchTextUpper = this.searchText.toUpperCase()
+            if (this.searchText === '') {
+                return this.contacts
+            }
+            const filteredContacts = this.contacts.filter((user, index) => {
+                return user.name.toUpperCase().includes(searchTextUpper)
+            })
+            return filteredContacts
+        }
+    },
     methods: {
         formatHour: function (userIndex) {
             const messages = this.contacts[userIndex].messages
@@ -223,15 +235,5 @@ createApp({
             }
             this.contacts[this.activeUser].messages.push(messageInfo)
         },
-        searchFunction: function () {
-            let searchTextUpper = this.searchText.toUpperCase()
-            if (this.searchText === '') {
-                return this.contacts
-            }
-            const filteredContacts = this.contacts.filter((user, index) => {
-                user.name.toUpperCase().includes(searchTextUpper)
-            })
-            return filteredContacts
-        }
     }
 }).mount('#app')
