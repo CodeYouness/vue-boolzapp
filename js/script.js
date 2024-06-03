@@ -167,7 +167,7 @@ createApp({
                 }
             ],
             activeUser: 0,
-            insertText: null
+            insertText: ""
         }
     },
     methods: {
@@ -178,11 +178,9 @@ createApp({
             time = time.slice(0, -3)
             return time
         },
-        formatDate: function (userIndex) {
+        lastMessage: function (userIndex) {
             const messages = this.contacts[userIndex].messages
-            const lastMessagesData = messages[messages.length - 1].date
-            const [date, time] = lastMessagesData.split(' ')
-            return date
+            return messages[messages.length - 1].message
         },
         returnActiveUser: function (nameProperty) {
             return this.contacts[this.activeUser][nameProperty]
