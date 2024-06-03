@@ -166,7 +166,8 @@ createApp({
                     ],
                 }
             ],
-            activeUser: 0
+            activeUser: 0,
+            insertText: null
         }
     },
     methods: {
