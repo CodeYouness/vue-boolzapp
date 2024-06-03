@@ -223,7 +223,15 @@ createApp({
             this.contacts[this.activeUser].messages.push(messageInfo)
         },
         searchFunction: function () {
-            console.log('evvai')
+            const input = document.getElementById('myInput')
+            const chatContainer = document.getElementById('chat-preview-container')
+            const inputValue = input.value.toUpperCase()
+            const chat = chatContainer.getElementsByClassName('flex')
+            this.contacts.forEach((user, index) => {
+                const nameUser = chat[index].getElementsByTagName('h4')[0];
+                txtValue = nameUser.textContent || nameUser.innerText;
+
+            });
         }
     }
 }).mount('#app')
