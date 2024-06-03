@@ -167,7 +167,8 @@ createApp({
                 }
             ],
             activeUser: 0,
-            insertText: ""
+            insertText: "",
+            searchText: '',
         }
     },
     methods: {
@@ -223,21 +224,10 @@ createApp({
             this.contacts[this.activeUser].messages.push(messageInfo)
         },
         searchFunction: function () {
-            const input = document.getElementById('myInput')
-            const chatContainer = document.getElementById('chat-preview-container')
-            const inputValue = input.value.toUpperCase()
-            const chat = chatContainer.getElementsByClassName('flex')
-            this.contacts.forEach((user, index) => {
-                const nameUser = chat[index].getElementsByTagName('h4')[0];
-                txtValue = nameUser.textContent || nameUser.innerText;
-                if (txtValue.toUpperCase().indexOf(inputValue) > -1) {
-                    chat[index].classList.add('flex');
-                    chat[index].classList.remove('none');
-                } else {
-                    chat[index].classList.add('none');
-                    chat[index].classList.remove('flex');
-                }
-            });
+            let searchTextUpper = this.searchText.toUpperCase()
+            // if (this.searchText === '') {
+            console.log(searchTextUpper)
+            // }
         }
     }
 }).mount('#app')
