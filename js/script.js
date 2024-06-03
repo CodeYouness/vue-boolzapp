@@ -173,7 +173,8 @@ createApp({
         formatHour: function (userIndex) {
             const messages = this.contacts[userIndex].messages
             const lastMessagesData = messages[messages.length - 1].date
-            const [date, time] = lastMessagesData.split(' ')
+            let [date, time] = lastMessagesData.split(' ')
+            time = time.slice(0, -3)
             return time
         },
         formatDate: function (userIndex) {
@@ -188,7 +189,8 @@ createApp({
         lastMessagesHour: function () {
             const messages = this.contacts[this.activeUser].messages
             const lastMessagesData = messages[messages.length - 1].date
-            const [date, time] = lastMessagesData.split(' ')
+            let [date, time] = lastMessagesData.split(' ')
+            time = time.slice(0, -3)
             return time
         },
         changeActiveUser: function (index) {
@@ -196,7 +198,8 @@ createApp({
         },
         returnHour: function (message) {
             const dateTime = message.date
-            const [date, time] = dateTime.split(' ')
+            let [date, time] = dateTime.split(' ')
+            time = time.slice(0, -3)
             return time
         },
         addMessage: function (newMessage) {

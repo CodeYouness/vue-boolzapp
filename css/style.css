@@ -151,7 +151,6 @@ a,
 
 .chat-system {
     background-image: url(../img/mine.jpg);
-    background-size: contain;
     height: 84%;
     border-right: #f3eeea 1px solid;
     padding: 3rem 3rem 0;
