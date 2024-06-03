@@ -221,6 +221,12 @@ createApp({
                 'status': 'received'
             }
             this.contacts[this.activeUser].messages.push(messageInfo)
+        },
+        addActiveClass: function (sameDiv, index) {
+            sameDiv.classList.add('yeah')
+            // this.contacts.forEach((element) => {
+            //     if(element)
+            // });
         }
     }
 }).mount('#app')

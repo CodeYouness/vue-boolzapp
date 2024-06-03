@@ -67,7 +67,8 @@
 
                 <!-- Chat preview -->
                 <section class="chat-preview">
-                    <div class="flex" v-for="(user,index) in contacts" :key="index" @click="changeActiveUser(index)">
+                    <div class="flex" v-for="(user,index) in contacts" :key="index" @click="changeActiveUser(index)"
+                        :class="(activeUser === index) ? 'active': ''">
                         <img :src="user.avatar + '.jpg'" alt="user.name">
                         <div class="text-wrapper">
                             <h4>{{user.name}}</h4>

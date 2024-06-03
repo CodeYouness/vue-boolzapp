@@ -133,7 +133,11 @@ a,
 }
 
 .chat-preview>div:hover {
-    background-color: #eee
+    background-color: #f3f3f3
+}
+
+.active {
+    background-color: #dfdfdf;
 }
 
 .chat-preview img {
