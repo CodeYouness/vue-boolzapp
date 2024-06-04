@@ -205,6 +205,19 @@ a,
     bottom: 3px;
 }
 
+.tent {
+    position: absolute;
+    right: 8px;
+    top: 0px;
+    font-size: 1.3rem;
+    display: none;
+}
+
+
+.message:hover .tent {
+    display: block;
+}
+
 .none {
     display: none;
 }

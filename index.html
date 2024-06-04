@@ -102,14 +102,17 @@
                     </div>
                 </header>
 
+                <!-- messages -->
                 <div class="chat-system">
                     <div class="message" v-for="(messageInfo, index) in contacts[activeUser].messages" :key="index"
                         :class="(messageInfo.status === 'sent') ? 'sent' : 'received'">
+                        <span class="tent">&#x02C4;</span>
                         <p>{{messageInfo.message}} </p>
                         <span class="sent-hour small-text">{{returnHour(messageInfo)}}</span>
                     </div>
                 </div>
 
+                <!-- chat bar undex messages -->
                 <div class="text-box flex ">
                     <i class="fa-regular fa-face-smile"></i>
                     <input type="text" placeholder="Scrivi un messaggio" v-model="insertText"
