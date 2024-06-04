@@ -217,10 +217,11 @@ createApp({
         },
         // qui cambio l ora
         addMessage: function (newMessage) {
-            const now = DateTime.now().toLocaleString(DateTime.TIME_24_SIMPLE);
-            console.log(now)
+            const nowHour = DateTime.now().toLocaleString(DateTime.TIME_24_WITH_SECONDS);
+            const nowDate = DateTime.now().toLocaleString(DateTime.DATE_SHORT);
+            const now = nowDate + ' ' + nowHour
             const messageInfo = {
-                'date': '10/01/2020 15:30:55',
+                'date': now,
                 'message': '',
                 'status': 'sent'
             }
@@ -232,8 +233,11 @@ createApp({
             }
         },
         answerMessage: function () {
+            const nowHour = DateTime.now().toLocaleString(DateTime.TIME_24_WITH_SECONDS);
+            const nowDate = DateTime.now().toLocaleString(DateTime.DATE_SHORT);
+            const now = nowDate + ' ' + nowHour
             const messageInfo = {
-                'date': '10/01/2020 16:30:55',
+                'date': now,
                 'message': 'ok!',
                 'status': 'received'
             }
