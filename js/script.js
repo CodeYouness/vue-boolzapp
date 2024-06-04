@@ -201,7 +201,14 @@ createApp({
         },
         lastMessagesHour: function () {
             const messages = this.contacts[this.activeUser].messages
-            const lastMessagesData = messages[messages.length - 1].date
+            const messagesReceived = messages.filter((singleMessageInfo, index) => {
+                if (singleMessageInfo.status === 'received') {
+                    return true
+                }
+
+                return false
+            })
+            const lastMessagesData = messagesReceived[messagesReceived.length - 1].date
             let [date, time] = lastMessagesData.split(' ')
             time = time.slice(0, -3)
             return time
@@ -215,7 +222,6 @@ createApp({
             time = time.slice(0, -3)
             return time
         },
-        // qui cambio l ora
         addMessage: function (newMessage) {
             const nowHour = DateTime.now().toLocaleString(DateTime.TIME_24_WITH_SECONDS);
             const nowDate = DateTime.now().toLocaleString(DateTime.DATE_SHORT);
