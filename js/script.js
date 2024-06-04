@@ -1,4 +1,5 @@
 const { createApp } = Vue
+const DateTime = luxon.DateTime;
 
 createApp({
     data() {
@@ -214,7 +215,10 @@ createApp({
             time = time.slice(0, -3)
             return time
         },
+        // qui cambio l ora
         addMessage: function (newMessage) {
+            const now = DateTime.now().toLocaleString(DateTime.TIME_24_SIMPLE);
+            console.log(now)
             const messageInfo = {
                 'date': '10/01/2020 15:30:55',
                 'message': '',
