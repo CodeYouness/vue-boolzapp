@@ -170,6 +170,7 @@ createApp({
             activeUser: 0,
             insertText: "",
             searchText: '',
+            tentMessage: ''
         }
     },
     computed: {
@@ -248,6 +249,16 @@ createApp({
                 'status': 'received'
             }
             this.contacts[this.activeUser].messages.push(messageInfo)
+        },
+        startDrag(evt, item) {
+            evt.dataTransfer.dropEffect = 'move'
+            evt.dataTransfer.effectAllowed = 'move'
+            evt.dataTransfer.setData('itemID', item.id)
+        },
+        onDrop(evt, list) {
+            const itemID = evt.dataTransfer.getData('itemID')
+            const item = this.contacts.find((item) => item.id == itemID)
+            item.list = list
         },
     }
 }).mount('#app')

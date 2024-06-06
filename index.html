@@ -67,9 +67,11 @@
                 </div>
 
                 <!-- Chat preview -->
-                <section class="chat-preview" id="chat-preview-container">
-                    <div class="flex" v-for="(user,index) in searchFunction" :key="index"
-                        @click="changeActiveUser(index)" :class="(activeUser === index) ? 'active': ''">
+                <section class="chat-preview" id="chat-preview-container" @drop="onDrop($event, 1)" @dragover.prevent
+                    @dragenter.prevent>
+                    <div class=" flex" v-for="(user,index) in searchFunction" :key="index"
+                        @click="changeActiveUser(index)" :class="(activeUser === index) ? 'active': ''" draggable="true"
+                        @dragstart="startDrag($event, user)">
                         <img :src="user.avatar + '.jpg'" alt="user.name">
                         <div class="text-wrapper">
                             <h4>{{user.name}}</h4>
